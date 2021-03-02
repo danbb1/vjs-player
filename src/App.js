@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import VideoJSPLayer from './players/videojs'
+import pizzOven from './videos/pizza-oven.mp4'
+import pizzaMaker from './videos/pizza-maker.mp4'
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Welcome to my app</h1>
+      <div style={{ width: `100%` }}>
+        <VideoJSPLayer source={pizzOven} />
+        <VideoJSPLayer source={pizzaMaker} />
+      </div>
     </div>
   );
 }
